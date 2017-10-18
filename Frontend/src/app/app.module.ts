@@ -3,11 +3,17 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RoomlistComponent } from './roomlist/roomlist.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { TransactionComponent } from './transaction/transaction.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoomlistComponent
+    RoomlistComponent,
+    LoginComponent,
+    RegisterComponent,
+    TransactionComponent
   ],
   imports: [
     BrowserModule

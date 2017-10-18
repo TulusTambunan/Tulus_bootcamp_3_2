@@ -15,6 +15,15 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('pelanggan_id')->unsigned();
+            $table->foreign('pelanggan_id')->references('id')->on('pelanggans');
+            $table->integer('kamar_id')->unsigned();
+            $table->foreign('kamar_id')->references('id')->on('kamars');    
+    
+
+            $table->increments('tanggal_masuk');
+            $table->increments('tanggal_keluar');
+            
             $table->timestamps();
         });
     }
